@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group 'org.rps'
+version '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '2.4.2'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.4.2'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-jdbc', version: '2.4.2'
+    implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.23'
+    compileOnly 'org.projectlombok:lombok:1.18.16'
+    annotationProcessor 'org.projectlombok:lombok:1.18.16'
+
+    testCompileOnly 'org.projectlombok:lombok:1.18.16'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.16'
+    testImplementation group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '2.4.2'
+    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.7.1'
+    testImplementation group: 'junit', name: 'junit', version: '4.13.2'
+}
