@@ -52,7 +52,7 @@ public class ComputerGameProcessor implements GameProcessor {
         int weaponNumber = generator.nextInt(weapons.size());
         String generatedWeapon = weapons.get(weaponNumber);
         return (Weapons) Class.forName(
-                "application.weapons." + generatedWeapon,
+                WEAPON_PACKAGES + generatedWeapon,
                 true,
                 this.getClass().getClassLoader()).getDeclaredConstructor().newInstance();
     }
